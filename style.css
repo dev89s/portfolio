@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  font-family: Poppins, Verdana, sans-serif;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5% 8%;
+}
+
+nav .logo {
+  color: #6070FF;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+nav .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 30px;
+}
+
+main {
+  padding: 8%;
+  background-image: url(src/backgrounds/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-title {
+  font-size: 40px;
+  font-family: Poppins;
+  color: #172B4D;
+  margin-top: 20%;
+}
+
+.main-description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #344563;
+  margin-top: 12px;
+  line-height: 24px;
+}
+
+p.connect {
+  color: #7F8CFF;
+  margin-top: 8%;
+  margin-bottom: 3.5%;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.connect-icons {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  color: #505F79;
+}
+
+.connect-icons a {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.connect-icons a:hover {
+  background-color: #babdda;
+}
