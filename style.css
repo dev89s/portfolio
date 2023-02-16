@@ -10,7 +10,6 @@ a {
 
 .wrapper {
   font-family: Poppins, Verdana, sans-serif;
-
 }
 
 nav {
@@ -21,7 +20,7 @@ nav {
 }
 
 nav .logo {
-  color: #6070FF;
+  color: #6070ff;
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
@@ -45,7 +44,7 @@ main {
 .main-title {
   font-size: 40px;
   font-family: Poppins;
-  color: #172B4D;
+  color: #172b4d;
   margin-top: 20%;
 }
 
@@ -58,7 +57,7 @@ main {
 }
 
 p.connect {
-  color: #7F8CFF;
+  color: #7f8cff;
   margin-top: 8%;
   margin-bottom: 3.5%;
   font-size: 16px;
@@ -69,7 +68,7 @@ p.connect {
   display: flex;
   align-items: center;
   gap: 3%;
-  color: #505F79;
+  color: #505f79;
 }
 
 .connect-icons a {
