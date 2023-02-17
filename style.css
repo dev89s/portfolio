@@ -2,15 +2,24 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Poppins, Verdana, sans-serif;
 }
 
 a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 .wrapper {
   font-family: Poppins, Verdana, sans-serif;
 }
+
+/*
+  -----Header-----
+*/
 
 nav {
   display: flex;
@@ -34,11 +43,23 @@ nav .menu {
   width: 30px;
 }
 
-main {
+/*
+  -----Main-----
+*/
+
+/*
+  Headline Section
+*/
+
+.headline {
+  display: flex;
+  flex-direction: column;
   padding: 8%;
+  gap: 12px;
   background-image: url(src/backgrounds/background.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  height: 626px;
 }
 
 .main-title {
@@ -51,14 +72,11 @@ main {
   font-size: 16px;
   font-weight: 400;
   color: #344563;
-  margin-top: 12px;
   line-height: 24px;
 }
 
 .connect {
   color: #7f8cff;
-  margin-top: 8%;
-  margin-bottom: 3.5%;
   font-size: 16px;
   font-weight: 500;
 }
@@ -79,4 +97,223 @@ main {
 
 .connect-icons a:hover {
   background-color: #babdda;
+}
+
+/*
+  Works Section
+*/
+
+.works {
+  display: grid;
+  padding: 8%;
+  padding-top: 20%;
+  background-color: #e5e5e5;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: #fff;
+  margin: 15% 0;
+  padding: 5%;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+}
+
+.card-cover {
+  width: 100%;
+}
+
+.card-title {
+  color: #172b4d;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.card-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  height: 32px;
+}
+
+.prim-detail-cap {
+  color: #344563;
+}
+
+.sec-detail-cap {
+  color: #7a869a;
+}
+
+.card .description {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #344563;
+}
+
+.techstack {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 3% 0;
+}
+
+.techstack li {
+  padding: 4px 12px;
+  background-color: #ebebff;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #6070ff;
+}
+
+.techstack li:hover {
+  box-shadow:
+    1px 1px 5px rgba(0, 0, 0, 0.1),
+    -1px -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.works .card button {
+  color: #6070ff;
+  background-color: #fff;
+  border: 1px solid #6070ff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 17px;
+}
+
+.works .card button:hover {
+  background-color: #6070ff;
+  color: #fff;
+  box-shadow:
+    1px 1px 5px rgba(0, 0, 0, 0.3),
+    -1px -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.works .card button:active {
+  background-color: #2230d2;
+  color: #fff;
+  box-shadow:
+    1px 1px 5px rgba(0, 0, 0, 0.3),
+    -1px -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.works .card button:disabled {
+  background-color: #fff;
+  color: #5e6c84;
+  border-color: #5e6c84;
+}
+
+/* About Myself Section */
+
+.about-myself {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 8%;
+  background-color: #fff;
+  padding-top: 30%;
+}
+
+.about-title {
+  color: #172b4d;
+  font-size: 40px;
+}
+
+.about-description {
+  color: #344563;
+}
+
+.resume-link {
+  color: #6070ff;
+  background-color: #fff;
+  border: 1px solid #6070ff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-style: normal;
+}
+
+.resume-link:hover {
+  background-color: #6070ff;
+  color: #fff;
+  box-shadow:
+    1px 1px 5px rgba(0, 0, 0, 0.3),
+    -1px -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.resume-link:active {
+  background-color: #2230d2;
+  color: #fff;
+  box-shadow:
+    1px 1px 5px rgba(0, 0, 0, 0.3),
+    -1px -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.resume-link:disabled {
+  background-color: #fff;
+  color: #5e6c84;
+  border-color: #5e6c84;
+}
+
+/* Categories */
+
+.categories {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  margin: 5% 0;
+}
+
+.cat-list-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+  font-size: 20px;
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.categories li.lang-open {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-bottom: none;
+}
+
+.arrow {
+  height: 18px;
+  margin-right: 18px;
+}
+
+.cat-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8%;
+}
+
+.lang-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.lang-open .lang-list li {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f9;
+  border-radius: 8px;
+  gap: 5px;
+  margin: 2% 0;
+  padding: 3%;
+  font-size: 15px;
+}
+
+.lang-open .lang-list img {
+  height: 18%;
+  width: 18%;
 }
