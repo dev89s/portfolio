@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Poppins, Verdana, sans-serif;
 }
 
 a {
@@ -105,7 +106,7 @@ nav .menu {
 .works {
   display: grid;
   padding: 8%;
-  padding-top: 35%;
+  padding-top: 20%;
   background-color: #e5e5e5;
 }
 
@@ -176,20 +177,35 @@ nav .menu {
     -1px -1px 5px rgba(0, 0, 0, 0.1);
 }
 
-.works .card a {
+.works .card button {
   color: #6070ff;
+  background-color: #fff;
   border: 1px solid #6070ff;
   padding: 12px;
   border-radius: 8px;
   font-size: 17px;
 }
 
-.works .card a:hover {
+.works .card button:hover {
   background-color: #6070ff;
   color: #fff;
   box-shadow:
     1px 1px 5px rgba(0, 0, 0, 0.3),
     -1px -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.works .card button:active {
+  background-color: #2230d2;
+  color: #fff;
+  box-shadow:
+    1px 1px 5px rgba(0, 0, 0, 0.3),
+    -1px -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.works .card button:disabled {
+  background-color: #fff;
+  color: #5e6c84;
+  border-color: #5e6c84;
 }
 
 /* About Myself Section */
@@ -215,10 +231,12 @@ nav .menu {
 
 .resume-link {
   color: #6070ff;
+  background-color: #fff;
   border: 1px solid #6070ff;
   padding: 12px;
   border-radius: 8px;
   font-size: 17px;
+  font-style: normal;
 }
 
 .resume-link:hover {
@@ -229,6 +247,19 @@ nav .menu {
     -1px -1px 5px rgba(0, 0, 0, 0.3);
 }
 
+.resume-link:active {
+  background-color: #2230d2;
+  color: #fff;
+  box-shadow:
+    1px 1px 5px rgba(0, 0, 0, 0.3),
+    -1px -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.resume-link:disabled {
+  background-color: #fff;
+  color: #5e6c84;
+  border-color: #5e6c84;
+}
 /* Categories */
 
 .categories {
