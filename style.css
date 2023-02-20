@@ -157,13 +157,22 @@ nav .menu {
 }
 
 .techstack {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  /* display: flex;
+  align-items: center; */
+  /* gap: 8px; */
+
+
   margin: 3% 0;
 }
 
 .techstack li {
+
+  /* changed display to float */
+  float: left;
+  margin: 0 5px;
+
+  /* float  */
+
   padding: 4px 12px;
   background-color: #ebebff;
   border-radius: 8px;
