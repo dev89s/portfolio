@@ -325,7 +325,7 @@ nav .menu {
   flex-direction: column;
   padding: 8%;
   gap: 12px;
-  background-color: #6070FF;
+  background-color: #6070ff;
   background-image: url(src/backgrounds/contact-background.svg);
   background-repeat: no-repeat;
   background-position: top right;
@@ -359,13 +359,11 @@ nav .menu {
 }
 
 .contact-submit {
-  border-bottom-style: ;
   background-color: #fff;
-  color: #6070FF;
+  color: #6070ff;
   padding: 16px;
-  border: 1px solid #6070FF;
+  border: 1px solid #6070ff;
   font-size: 17px;
   border-radius: 8px;
   width: 45%;
 }
-
