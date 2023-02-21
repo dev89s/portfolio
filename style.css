@@ -330,6 +330,7 @@ nav .menu {
   background-repeat: no-repeat;
   background-position: top right;
   color: #fff;
+  border-top-left-radius: 100px;
 }
 
 .contact-section .contact-form {
@@ -342,6 +343,7 @@ nav .menu {
 .message {
   text-align: center;
   font-size: 20px;
+  margin-bottom: 15%;
 }
 
 .contacts-heading {
@@ -356,5 +358,14 @@ nav .menu {
   font-size: 17px;
 }
 
-
+.contact-submit {
+  border-bottom-style: ;
+  background-color: #fff;
+  color: #6070FF;
+  padding: 16px;
+  border: 1px solid #6070FF;
+  font-size: 17px;
+  border-radius: 8px;
+  width: 45%;
+}
 
