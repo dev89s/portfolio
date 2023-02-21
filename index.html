@@ -203,17 +203,17 @@
         </ul>
       </section>
       <section class="contact-section">
-        <form action="" method="get" class="contact-form">
+        <form action="https://formspree.io/f/mvonabkk" method="post" class="contact-form">
           <h2 class="contacts-heading">Contact Me</h2>
           <p class="message">
             If you have an application you are interested in developing, a feature that you need built or a project that
             needs coding. I’d love to help with it
           </p>
-          <input type="text" name="full-name" id="name" placeholder="name" class="contacts-input">
-          <input type="text" name="email" id="email" placeholder="email address" class="contacts-input">
+          <input type="text" name="full-name" id="name" placeholder="name" class="contacts-input" maxlength="30" required>
+          <input type="email" name="email" id="email" placeholder="email address" class="contacts-input" required>
           <textarea name="description" id="description" cols="30" rows="5" placeholder="Write a message here"
-            class="contacts-input"></textarea>
-            <input type="submit" name="submit" id="submit" value="Get in touch" class="contact-submit">
+            class="contacts-input" maxlength="500" required></textarea>
+          <input type="submit" name="submit" id="submit" value="Get in touch" class="contact-submit">
         </form>
       </section>
     </main>

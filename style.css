@@ -367,3 +367,25 @@ nav .menu {
   border-radius: 8px;
   width: 45%;
 }
+
+.contact-submit:hover {
+  background-color: #6070ff;
+  color: #fff;
+  box-shadow:
+    1px 1px 5px rgba(0, 0, 0, 0.3),
+    -1px -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.contact-submit:active {
+  background-color: #2230d2;
+  color: #fff;
+  box-shadow:
+    1px 1px 5px rgba(0, 0, 0, 0.3),
+    -1px -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.contact-submit:disabled {
+  background-color: #fff;
+  color: #5e6c84;
+  border-color: #5e6c84;
+}
