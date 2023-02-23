@@ -70,7 +70,7 @@ nav .hamburger-menu {
     gap: 8px;
   }
 
-  nav .desktop-menu li + li {
+  nav .desktop-menu li+li {
     margin-left: 24px;
   }
 
@@ -111,7 +111,7 @@ nav .hamburger-menu {
   font-weight: 400;
   color: #344563;
   line-height: 24px;
-} 
+}
 
 .connect {
   color: #7f8cff;
@@ -293,7 +293,6 @@ nav .hamburger-menu {
 
   .card4 .card-cover {
     content: url(src/images/card-cover4-desktop.png);
-    /* width: 100%; */
   }
 
   .even .card-cover {
@@ -322,7 +321,7 @@ nav .hamburger-menu {
   .prim-detail-cap {
     font-size: 18px;
   }
-  
+
   .sec-detail-cap {
     font-size: 18px;
   }
@@ -336,7 +335,6 @@ nav .hamburger-menu {
   .works .card button {
     margin-top: 5%;
   }
-  
 }
 
 /* About Myself Section */
@@ -477,13 +475,14 @@ nav .hamburger-menu {
     flex-direction: row;
     gap: 8px;
   }
+
   .lang-open .lang-list li {
     flex-direction: column;
     gap: 15px;
     margin: 0;
     align-items: flex-start;
     flex-basis: 120px;
-    min-height: 120px ;
+    min-height: 120px;
   }
 
   .lang-open .lang-list img {
@@ -568,7 +567,7 @@ nav .hamburger-menu {
     background-image: url(src/backgrounds/contact-desktop.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 110% ;
+    background-size: 110%;
     color: #fff;
     border-top-left-radius: 100px;
   }
@@ -581,7 +580,7 @@ nav .hamburger-menu {
     max-width: 768px;
     margin-top: 8%;
   }
-  
+
   .contact-form .message {
     font-size: 20px;
     margin-bottom: 5%;
@@ -590,6 +589,7 @@ nav .hamburger-menu {
   .contact-submit {
     align-self: center;
   }
+
   .contacts-input {
     margin: 0 10%;
   }
