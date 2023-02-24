@@ -91,7 +91,7 @@ nav .hamburger-menu {
     gap: 8px;
   }
 
-  nav .desktop-menu li + li {
+  nav .desktop-menu li+li {
     margin-left: 24px;
   }
 
@@ -403,7 +403,7 @@ nav .hamburger-menu {
   border-radius: 8px;
   font-size: 17px;
   font-style: normal;
-  
+
   /* transition */
   transition: background-color 0.5s ease-out, color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
