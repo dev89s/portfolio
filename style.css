@@ -60,6 +60,27 @@ nav .hamburger-menu {
     padding: 5% 8%;
   }
 
+  nav .logo {
+    color: #6070ff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+
+    /* Animations */
+    animation-name: rotate-logo;
+    animation-duration: 2s;
+  }
+
+  @keyframes rotate-logo {
+    from {
+      transform: rotate(360deg);
+    }
+
+    to {
+      transform: rotate(0);
+    }
+  }
+
   nav .hamburger-menu {
     display: none;
   }
