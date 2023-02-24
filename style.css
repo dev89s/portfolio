@@ -240,6 +240,7 @@ nav .hamburger-menu {
   padding: 12px;
   border-radius: 8px;
   font-size: 17px;
+  cursor: pointer;
 }
 
 .works .card button:hover {
@@ -364,6 +365,7 @@ nav .hamburger-menu {
 }
 
 .resume-link {
+  cursor: pointer;
   color: #6070ff;
   background-color: #fff;
   border: 1px solid #6070ff;
@@ -529,6 +531,7 @@ nav .hamburger-menu {
 }
 
 .contact-submit {
+  cursor: pointer;
   background-color: #fff;
   color: #6070ff;
   padding: 16px;
