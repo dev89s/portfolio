@@ -60,6 +60,27 @@ nav .hamburger-menu {
     padding: 5% 8%;
   }
 
+  nav .logo {
+    color: #6070ff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+
+    /* Animations */
+    animation-name: rotate-logo;
+    animation-duration: 2s;
+  }
+
+  @keyframes rotate-logo {
+    from {
+      transform: rotate(360deg);
+    }
+
+    to {
+      transform: rotate(0);
+    }
+  }
+
   nav .hamburger-menu {
     display: none;
   }
@@ -241,6 +262,9 @@ nav .hamburger-menu {
   border-radius: 8px;
   font-size: 17px;
   cursor: pointer;
+
+  /* transition */
+  transition: background-color 0.5s ease-out, color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
 .works .card button:hover {
@@ -277,6 +301,12 @@ nav .hamburger-menu {
     grid-template-columns: 1fr 1fr;
     margin: 10% auto;
     padding: 24px;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), -3px -3px 5px rgba(0, 0, 0, 0.2);
   }
 
   .card1 .card-cover {
@@ -373,6 +403,9 @@ nav .hamburger-menu {
   border-radius: 8px;
   font-size: 17px;
   font-style: normal;
+
+  /* transition */
+  transition: background-color 0.5s ease-out, color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
 .resume-link:hover {
@@ -539,6 +572,9 @@ nav .hamburger-menu {
   font-size: 17px;
   border-radius: 8px;
   width: 45%;
+
+  /* transition */
+  transition: background-color 0.5s ease-out, color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
 .contact-submit:hover {
