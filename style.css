@@ -241,6 +241,8 @@ nav .hamburger-menu {
   border-radius: 8px;
   font-size: 17px;
   cursor: pointer;
+  /* transition */
+  transition: background-color 0.5s ease-out, color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
 .works .card button:hover {
@@ -373,6 +375,8 @@ nav .hamburger-menu {
   border-radius: 8px;
   font-size: 17px;
   font-style: normal;
+  /* transition */
+  transition: background-color 0.5s ease-out, color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
 .resume-link:hover {
@@ -539,6 +543,8 @@ nav .hamburger-menu {
   font-size: 17px;
   border-radius: 8px;
   width: 45%;
+  /* transition */
+  transition: background-color 0.5s ease-out, color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
 .contact-submit:hover {
