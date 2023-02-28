@@ -545,6 +545,10 @@ nav .hamburger-menu {
   margin-top: 20%;
 }
 
+.contact-form label {
+  display: none;
+}
+
 .message {
   text-align: center;
   font-size: 20px;
