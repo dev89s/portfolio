@@ -91,7 +91,7 @@ nav .hamburger-menu {
     gap: 8px;
   }
 
-  nav .desktop-menu li + li {
+  nav .desktop-menu li+li {
     margin-left: 24px;
   }
 
@@ -543,6 +543,10 @@ nav .hamburger-menu {
   flex-direction: column;
   gap: 12px;
   margin-top: 20%;
+}
+
+.contact-form label {
+  display: none;
 }
 
 .message {

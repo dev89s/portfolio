@@ -18,7 +18,7 @@
   <div class="wrapper">
     <header>
       <nav>
-        <a href="#">
+        <a href="#" tabindex="0">
           <div class="logo">
             My Portfolio
           </div>
@@ -225,9 +225,12 @@
             If you have an application you are interested in developing, a feature that you need built or a project that
             needs coding. I’d love to help with it
           </p>
+          <label for="name"></label>
           <input type="text" name="full-name" id="name" placeholder="name" class="contacts-input" maxlength="30"
             required>
+            <label for="email"></label>
           <input type="email" name="email" id="email" placeholder="email address" class="contacts-input" required>
+          <label for="description"></label>
           <textarea name="description" id="description" cols="30" rows="5" placeholder="Write a message here"
             class="contacts-input" maxlength="500" required></textarea>
           <input type="submit" name="submit" id="submit" value="Get in touch" class="contact-submit">
