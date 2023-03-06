@@ -21,6 +21,46 @@ li {
   -----Header-----
 */
 
+.overlay-menu {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: rgba(64, 83, 252, 0.7);
+  backdrop-filter: blur(7px);
+}
+
+.overlay-menu .content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: auto;
+  width: 80%;
+  font-size: 2rem;
+}
+
+.overlay-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.overlay-menu .close {
+  align-self: flex-end;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.overlay-menu .close:hover,
+.overlay-menu .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -61,6 +101,7 @@ nav .hamburger-menu {
   }
 
   nav .logo {
+    color: #4053fc;
     font-size: 18px;
     font-weight: 700;
     line-height: 20px;
@@ -244,7 +285,7 @@ nav .hamburger-menu {
   background-color: #ebebff;
   border-radius: 8px;
   font-size: 12px;
-  color: #6070ff;
+  color: #4053fc;
 }
 
 .techstack li:hover {
@@ -605,6 +646,7 @@ nav .hamburger-menu {
 @media screen and (min-width: 768px) {
   .contact-section {
     padding: 8%;
+    background-color: #4053fc;
     background-image: url(src/backgrounds/contact-desktop.svg);
     background-repeat: no-repeat;
     background-position: center;
