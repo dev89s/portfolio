@@ -1,3 +1,5 @@
+// ----- Hamburger button pop up menu ------- //
+
 const hamburgerButton = document.querySelector('#hamburger-menu');
 
 const overlayMenu = document.querySelector('.overlay-menu');
@@ -27,3 +29,5 @@ about.onclick = function () {
 contact.onclick = function () {
   overlayMenu.style.display = 'none';
 };
+
+// ----- Details Popup for projects ------- //

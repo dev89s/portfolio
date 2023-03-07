@@ -216,10 +216,10 @@ nav .hamburger-menu {
 }
 
 /*
-  Works Section
+  Projects Section
 */
 
-.works {
+.projects {
   display: flex;
   flex-direction: column;
   padding: 8%;
@@ -294,7 +294,7 @@ nav .hamburger-menu {
     -1px -1px 5px rgba(0, 0, 0, 0.1);
 }
 
-.works .card button {
+.projects .card button {
   color: #4053fc;
   background-color: #fff;
   border: 1px solid #4053fc;
@@ -307,7 +307,7 @@ nav .hamburger-menu {
   transition: background-color 0.5s ease-out, color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
-.works .card button:hover {
+.projects .card button:hover {
   background-color: #4053fc;
   color: #fff;
   box-shadow:
@@ -315,7 +315,7 @@ nav .hamburger-menu {
     -1px -1px 5px rgba(0, 0, 0, 0.3);
 }
 
-.works .card button:active {
+.projects .card button:active {
   background-color: #2230d2;
   color: #fff;
   box-shadow:
@@ -323,14 +323,14 @@ nav .hamburger-menu {
     -1px -1px 5px rgba(0, 0, 0, 0.3);
 }
 
-.works .card button:disabled {
+.projects .card button:disabled {
   background-color: #fff;
   color: #5e6c84;
   border-color: #5e6c84;
 }
 
 @media screen and (min-width: 768px) {
-  .works {
+  .projects {
     padding: 3% 8%;
     padding-top: 10%;
   }
@@ -403,7 +403,7 @@ nav .hamburger-menu {
     margin-top: 5%;
   }
 
-  .works .card button {
+  .projects .card button {
     margin-top: 5%;
   }
 }
