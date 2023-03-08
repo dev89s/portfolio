@@ -38,7 +38,7 @@ const cardInfo = [
     company: 'CANOPY',
     role: 'Back End Dev',
     year: '2015',
-    desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a thing.",
+    desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
     techstack: ['html', 'css', 'javasctipt'],
     imageUrl: "src/images/card-cover1.png"
   },
@@ -47,7 +47,7 @@ const cardInfo = [
     company: 'CANOPY',
     role: 'Back End Dev',
     year: '2015',
-    desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a thing.",
+    desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent. ",
     techstack: ['html', 'css', 'javasctipt'],
     imageUrl: "src/images/card-cover2.png"
   },
@@ -56,7 +56,7 @@ const cardInfo = [
     company: 'CANOPY',
     role: 'Back End Dev',
     year: '2015',
-    desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a thing.",
+    desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
     techstack: ['html', 'css', 'javasctipt'],
     imageUrl: "src/images/card-cover3.png"
   },
@@ -65,19 +65,60 @@ const cardInfo = [
     company: 'CANOPY',
     role: 'Back End Dev',
     year: '2015',
-    desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a thing.",
+    desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
     techstack: ['html', 'css', 'javasctipt'],
     imageUrl: "src/images/card-cover4.png"
   }
 ];
 
+function loadCards(cardInfo) {
+
+  const projects = document.querySelector('.projects');
+  for (let i = 0; i < cardInfo.length; i++) {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    let label = 'card' + i;
+    card.classList.add(label);
+    if (i % 2 == 0) {
+      card.classList.add('even');
+    } else {
+      card.classList.add('odd');
+    }
+    card.innerHTML = `
+    <img class="card-cover" src="${cardInfo[i].imageUrl}" alt="image of previous work example">
+    <div class="card-info">
+      <h2 class="card-title">${cardInfo[i].name}</h2>
+      <ul class="card-details">
+        <li class="prim-detail-cap">${cardInfo[i].company}</li>
+        <li><img src="src/icons/counter.svg" alt="circle dots"></li>
+        <Li class="sec-detail-cap">${cardInfo[i].role}</Li>
+        <li><img src="src/icons/counter.svg" alt="circle dots"></li>
+        <li class="sec-detail-cap">${cardInfo[i].year}</li>
+      </ul>
+      <p class="description">
+        ${cardInfo[i].desctiption}
+      </p>
+      <ul class="techstack">
+        <li>${cardInfo[i].techstack[0]}</li>
+        <li>${cardInfo[i].techstack[1]}</li>
+        <li>${cardInfo[i].techstack[2]}</li>
+      </ul>
+      <button class="card-button" type="button" id="card-button-${i + 1}">See Project</button>
+    </div>
+  `
+    projects.appendChild(card);
+  }
+}
+loadCards(cardInfo);
+
+
 const cardModal = document.querySelector('.card-modal');
 const cardModalContainer = document.querySelector('.card-modal-container');
 
-const firstCardBtn = document.querySelector('#first-card-button');
-const secondCardBtn = document.querySelector('#second-card-button');
-const thirdCardBtn = document.querySelector('#third-card-button');
-const forthCardBtn = document.querySelector('#forth-card-button');
+const firstCardBtn = document.querySelector('#card-button-1');
+const secondCardBtn = document.querySelector('#card-button-2');
+const thirdCardBtn = document.querySelector('#card-button-3');
+const forthCardBtn = document.querySelector('#card-button-4');
 
 function generate_popup(cardNum) {
   cardModalContainer.style.display = 'block';
@@ -123,7 +164,7 @@ function generate_popup(cardNum) {
   const closeModal = document.querySelector('.close-modal');
   closeModal.addEventListener('click', closeModalFunc);
 };
-function closeModalFunc () {
+function closeModalFunc() {
   cardModalContainer.style.display = 'none';
 }
 
@@ -140,7 +181,7 @@ forthCardBtn.addEventListener('click', () => {
   generate_popup(3);
 });
 
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == cardModalContainer) {
     cardModalContainer.style.display = "none";
   }
