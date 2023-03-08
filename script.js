@@ -40,7 +40,7 @@ const cardInfo = [
     year: '2015',
     desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
     techstack: ['html', 'css', 'javasctipt'],
-    imageUrl: "src/images/card-cover1.png"
+    imageUrl: 'src/images/card-cover1.png',
   },
   {
     name: 'Multi-Post Stories',
@@ -49,7 +49,7 @@ const cardInfo = [
     year: '2015',
     desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent. ",
     techstack: ['html', 'css', 'javasctipt'],
-    imageUrl: "src/images/card-cover2.png"
+    imageUrl: 'src/images/card-cover2.png',
   },
   {
     name: 'Tonic',
@@ -58,7 +58,7 @@ const cardInfo = [
     year: '2015',
     desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
     techstack: ['html', 'css', 'javasctipt'],
-    imageUrl: "src/images/card-cover3.png"
+    imageUrl: 'src/images/card-cover3.png',
   },
   {
     name: 'Multi-Post Stories',
@@ -67,19 +67,18 @@ const cardInfo = [
     year: '2015',
     desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
     techstack: ['html', 'css', 'javasctipt'],
-    imageUrl: "src/images/card-cover4.png"
-  }
+    imageUrl: 'src/images/card-cover4.png',
+  },
 ];
 
 function loadCards(cardInfo) {
-
   const projects = document.querySelector('.projects');
-  for (let i = 0; i < cardInfo.length; i++) {
+  for (let i = 0; i < cardInfo.length; i += 1) {
     const card = document.createElement('div');
     card.classList.add('card');
-    let label = 'card' + i;
+    const label = `card${i + 1}`;
     card.classList.add(label);
-    if (i % 2 == 0) {
+    if (i % 2 === 0) {
       card.classList.add('even');
     } else {
       card.classList.add('odd');
@@ -105,12 +104,11 @@ function loadCards(cardInfo) {
       </ul>
       <button class="card-button" type="button" id="card-button-${i + 1}">See Project</button>
     </div>
-  `
+  `;
     projects.appendChild(card);
   }
 }
 loadCards(cardInfo);
-
 
 const cardModal = document.querySelector('.card-modal');
 const cardModalContainer = document.querySelector('.card-modal-container');
@@ -120,7 +118,7 @@ const secondCardBtn = document.querySelector('#card-button-2');
 const thirdCardBtn = document.querySelector('#card-button-3');
 const forthCardBtn = document.querySelector('#card-button-4');
 
-function generate_popup(cardNum) {
+function generatePopup(cardNum) {
   cardModalContainer.style.display = 'block';
   const info = cardInfo[cardNum];
   cardModal.innerHTML = `
@@ -162,27 +160,27 @@ function generate_popup(cardNum) {
   </div>
   `;
   const closeModal = document.querySelector('.close-modal');
+  function closeModalFunc() {
+    cardModalContainer.style.display = 'none';
+  }
   closeModal.addEventListener('click', closeModalFunc);
-};
-function closeModalFunc() {
-  cardModalContainer.style.display = 'none';
 }
 
 firstCardBtn.addEventListener('click', () => {
-  generate_popup(0);
+  generatePopup(0);
 });
 secondCardBtn.addEventListener('click', () => {
-  generate_popup(1);
+  generatePopup(1);
 });
 thirdCardBtn.addEventListener('click', () => {
-  generate_popup(2);
+  generatePopup(2);
 });
 forthCardBtn.addEventListener('click', () => {
-  generate_popup(3);
+  generatePopup(3);
 });
 
 window.onclick = function (event) {
-  if (event.target == cardModalContainer) {
-    cardModalContainer.style.display = "none";
+  if (event.target === cardModalContainer) {
+    cardModalContainer.style.display = 'none';
   }
-} 
+} ;

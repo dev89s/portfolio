@@ -436,7 +436,7 @@ nav .hamburger-menu {
 
 .card-modal .card:hover {
   transform: none;
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .popup-header {
@@ -478,7 +478,7 @@ nav .hamburger-menu {
   flex: 1;
   height: 50px;
   display: flex;
-  padding: auto 10px;
+  padding: 0 10px;
   margin-top: 0;
   justify-content: center;
   align-items: center;
@@ -486,9 +486,8 @@ nav .hamburger-menu {
 }
 
 @media screen and (min-width: 768px) {
-
   /* Popup Card for Projects - Desktop */
-  
+
   .card-modal {
     margin: auto 10%;
   }
@@ -502,7 +501,6 @@ nav .hamburger-menu {
   .popup-card .card-info-sub {
     display: flex;
     flex-direction: column;
-
     width: 100%;
   }
 
@@ -513,13 +511,15 @@ nav .hamburger-menu {
 
   .popup-header {
     display: flex;
-    align-content:stretch ;
+    align-content: stretch;
     justify-content: space-between;
     width: 100%;
   }
 
   .popup-card .card-cover {
     margin: 3% 0;
+    aspect-ratio: 1108/586;
+    object-fit: cover;
   }
 
   .popup-card .description {
