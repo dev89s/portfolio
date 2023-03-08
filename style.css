@@ -216,10 +216,10 @@ nav .hamburger-menu {
 }
 
 /*
-  Works Section
+  Projects Section
 */
 
-.works {
+.projects {
   display: flex;
   flex-direction: column;
   padding: 8%;
@@ -294,11 +294,11 @@ nav .hamburger-menu {
     -1px -1px 5px rgba(0, 0, 0, 0.1);
 }
 
-.works .card button {
+.card .card-button {
   color: #4053fc;
   background-color: #fff;
   border: 1px solid #4053fc;
-  padding: 12px;
+  padding: 10px;
   border-radius: 8px;
   font-size: 17px;
   cursor: pointer;
@@ -307,7 +307,7 @@ nav .hamburger-menu {
   transition: background-color 0.5s ease-out, color 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
-.works .card button:hover {
+.card .card-button:hover {
   background-color: #4053fc;
   color: #fff;
   box-shadow:
@@ -315,7 +315,7 @@ nav .hamburger-menu {
     -1px -1px 5px rgba(0, 0, 0, 0.3);
 }
 
-.works .card button:active {
+.card .card-button:active {
   background-color: #2230d2;
   color: #fff;
   box-shadow:
@@ -323,14 +323,14 @@ nav .hamburger-menu {
     -1px -1px 5px rgba(0, 0, 0, 0.3);
 }
 
-.works .card button:disabled {
+.card .card-button:disabled {
   background-color: #fff;
   color: #5e6c84;
   border-color: #5e6c84;
 }
 
 @media screen and (min-width: 768px) {
-  .works {
+  .projects {
     padding: 3% 8%;
     padding-top: 10%;
   }
@@ -403,8 +403,129 @@ nav .hamburger-menu {
     margin-top: 5%;
   }
 
-  .works .card button {
+  .card .card-button {
     margin-top: 5%;
+  }
+}
+
+/* Popup Card for Projects */
+
+.card-modal-container {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(193, 199, 208, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.card-modal {
+  background-color: #fff;
+  margin: auto 5%;
+  border-radius: 16px;
+}
+
+.card-modal .card {
+  transition: none;
+}
+
+.card-modal .card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.popup-header {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  width: 100%;
+}
+
+.modal-title-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.popup-card .techstack {
+  padding-bottom: 25px;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(235, 236, 240, 1);
+}
+
+.close-modal {
+  font-size: 2.5rem;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  line-height: 1.5rem;
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  padding-top: 25px;
+}
+
+.popup-buttons button.card-button {
+  flex: 1;
+  height: 50px;
+  display: flex;
+  padding: 0 10px;
+  margin-top: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  /* Popup Card for Projects - Desktop */
+
+  .card-modal {
+    margin: auto 10%;
+  }
+
+  .popup-card .card-info {
+    flex-direction: row;
+    gap: 5%;
+    padding: 1% 0 5%;
+  }
+
+  .popup-card .card-info-sub {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .popup-card {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .popup-header {
+    display: flex;
+    align-content: stretch;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .popup-card .card-cover {
+    margin: 3% 0;
+    aspect-ratio: 1108/586;
+    object-fit: cover;
+  }
+
+  .popup-card .description {
+    max-width: 60%;
+    margin-top: 0;
   }
 }
 
