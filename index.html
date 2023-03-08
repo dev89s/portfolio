@@ -19,7 +19,7 @@
     <header>
       <div class="overlay-menu">
         <ul class="content">
-          <span class="close"><a href=""></a>&times;</span>
+          <span class="close">&times;</span>
           <li ><a href="#work" id="portfolio-link">Portfolio</a></li>
           <li ><a href="#about" id="about-link">About</a></li>
           <li ><a href="#contact" id="contact-link">Contact Me</a></li>
@@ -95,7 +95,7 @@
               <li>css</li>
               <li>javascript</li>
             </ul>
-            <button type="button">See Project</button>
+            <button class="card-button" type="button" id="first-card-button">See Project</button>
           </div>
         </div>
 
@@ -119,7 +119,7 @@
               <li>css</li>
               <li>javascript</li>
             </ul>
-            <button type="button">See Project</button>
+            <button class="card-button" type="button" id="second-card-button">See Project</button>
           </div>
         </div>
 
@@ -143,7 +143,7 @@
               <li>css</li>
               <li>javascript</li>
             </ul>
-            <button type="button">See Project</button>
+            <button class="card-button" type="button" id="third-card-button">See Project</button>
           </div>
         </div>
 
@@ -167,10 +167,17 @@
               <li>css</li>
               <li>javascript</li>
             </ul>
-            <button type="button">See Project</button>
+            <button class="card-button" type="button" id="forth-card-button">See Project</button>
           </div>
         </div>
       </section>
+
+      <!-- Popup Card Modal -->
+
+      <div class="card-modal-container">
+        <div class="card-modal">
+        </div>
+      </div>
 
       <!-- About Myself Section -->
       <section class="about-myself" id="about">
@@ -199,7 +206,7 @@
               </a>
             </li>
           </ul>
-          <button type="button" class="resume-link">Get my resume</button>
+          <button type="button" class="resume-link card-button">Get my resume</button>
         </div>
         
         <!-- categories -->
