@@ -183,4 +183,4 @@ window.onclick = function (event) {
   if (event.target === cardModalContainer) {
     cardModalContainer.style.display = 'none';
   }
-} ;
+};
