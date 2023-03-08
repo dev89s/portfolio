@@ -452,7 +452,16 @@ nav .hamburger-menu {
 
 }
 
-
+.popup-buttons button.card-button
+{
+  flex: 1 0 120px;
+  height: 50px;
+  display: flex;
+  padding: auto 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
 
 /* About Myself Section */
 
