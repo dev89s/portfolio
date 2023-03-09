@@ -190,23 +190,23 @@ const contactForm = document.querySelector('.contact-form');
 const contactError = document.querySelector('.contact-error');
 const emailInput = document.querySelector('#email');
 
-window.addEventListener('load', (event) => {
-  if(emailInput.value === '') {
+window.addEventListener('load', () => {
+  if (emailInput.value === '') {
     contactError.style.display = 'none';
   }
 });
 
-emailInput.addEventListener('input', (event) => {
-  if(emailInput.value === '') {
+emailInput.addEventListener('input', () => {
+  if (emailInput.value === '') {
     contactError.style.display = 'none';
   }
 });
 
 contactForm.addEventListener('submit', (event) => {
-  if (emailInput.value !== emailInput.value.toLowerCase()){
+  if (emailInput.value !== emailInput.value.toLowerCase()) {
     contactError.style.display = 'block';
-    contactError.textContent = "Email address should be lowercase";
-    
+    contactError.textContent = 'Email address should be lowercase';
+
     event.preventDefault();
   }
 });
