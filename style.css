@@ -728,6 +728,16 @@ nav .hamburger-menu {
   font-size: 17px;
 }
 
+.contact-error {
+  display: none;
+  align-self: flex-start;
+  font-size: 17px;
+  padding: 1% 3%;
+  background-color: #900;
+  color: #fff;
+  border-radius: 8px;
+}
+
 .contact-submit {
   cursor: pointer;
   background-color: #fff;
@@ -788,6 +798,10 @@ nav .hamburger-menu {
   .contact-form .message {
     font-size: 20px;
     margin-bottom: 5%;
+  }
+
+  .contact-error {
+    margin: 0 10%;
   }
 
   .contact-submit {
