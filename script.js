@@ -217,22 +217,27 @@ const nameInput = document.querySelector('#name');
 // emailInput declared before
 const messageInput = document.querySelector('#description');
 
-if (localStorage.getItem('name') || localStorage.getItem('email') || localStorage.getItem('message')) {
+let form = {};
+if (localStorage.getItem('form')) {
   restoreForm();
 } else {
   populateStorage();
 }
 
 function populateStorage() {
-  localStorage.setItem('name', nameInput.value);
-  localStorage.setItem('email', emailInput.value);
-  localStorage.setItem('message', messageInput.value);
+  form.name = nameInput.value;
+  form.email = emailInput.value;
+  form.message = messageInput.value;
+  const formStr = JSON.stringify(form);
+  localStorage.setItem('form', formStr);
 }
 
 function restoreForm() {
-  nameInput.value = localStorage.getItem('name');
-  emailInput.value = localStorage.getItem('email');
-  messageInput.value = localStorage.getItem('message');
+  const formStr = localStorage.getItem('form');
+  form = JSON.parse(formStr);
+  nameInput.value = form.name;
+  emailInput.value = form.email;
+  messageInput.value = form.message;
 }
 
 nameInput.addEventListener('change', populateStorage);
@@ -240,7 +245,5 @@ emailInput.addEventListener('change', populateStorage);
 messageInput.addEventListener('change', populateStorage);
 
 contactForm.addEventListener('submit', () => {
-  localStorage.setItem('name', '');
-  localStorage.setItem('email', '');
-  localStorage.setItem('message', '');
+  localStorage.setItem('form', '');
 });
