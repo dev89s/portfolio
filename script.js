@@ -217,7 +217,7 @@ const nameInput = document.querySelector('#name');
 // emailInput declared before
 const messageInput = document.querySelector('#description');
 
-if (localStorage.getItem('name')) {
+if (localStorage.getItem('name') || localStorage.getItem('email') || localStorage.getItem('message')) {
   restoreForm();
 } else {
   populateStorage();
@@ -238,3 +238,9 @@ function restoreForm() {
 nameInput.addEventListener('change', populateStorage);
 emailInput.addEventListener('change', populateStorage);
 messageInput.addEventListener('change', populateStorage);
+
+contactForm.addEventListener('submit', () => {
+  localStorage.setItem('name', '');
+  localStorage.setItem('email', '');
+  localStorage.setItem('message', '');
+});
