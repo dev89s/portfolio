@@ -238,8 +238,3 @@ function restoreForm() {
 nameInput.addEventListener('change', populateStorage);
 emailInput.addEventListener('change', populateStorage);
 messageInput.addEventListener('change', populateStorage);
-contactForm.addEventListener('submit', () => {
-  localStorage.setItem('name', '');
-  localStorage.setItem('email', '');
-  localStorage.setItem('message', '');
-})
