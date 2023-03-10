@@ -210,3 +210,36 @@ contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
   }
 });
+
+// ------- Form Local Storage -------- //
+
+const nameInput = document.querySelector('#name');
+// emailInput declared before
+const messageInput = document.querySelector('#description');
+
+if (localStorage.getItem('name')) {
+  restoreForm();
+} else {
+  populateStorage();
+}
+
+function populateStorage() {
+  localStorage.setItem('name', nameInput.value);
+  localStorage.setItem('email', emailInput.value);
+  localStorage.setItem('message', messageInput.value);
+}
+
+function restoreForm() {
+  nameInput.value = localStorage.getItem('name');
+  emailInput.value = localStorage.getItem('email');
+  messageInput.value = localStorage.getItem('message');
+}
+
+nameInput.addEventListener('change', populateStorage);
+emailInput.addEventListener('change', populateStorage);
+messageInput.addEventListener('change', populateStorage);
+contactForm.addEventListener('submit', () => {
+  localStorage.setItem('name', '');
+  localStorage.setItem('email', '');
+  localStorage.setItem('message', '');
+})
