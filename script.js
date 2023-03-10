@@ -218,12 +218,6 @@ const nameInput = document.querySelector('#name');
 const messageInput = document.querySelector('#description');
 
 let form = {};
-if (localStorage.getItem('form')) {
-  restoreForm();
-} else {
-  populateStorage();
-}
-
 function populateStorage() {
   form.name = nameInput.value;
   form.email = emailInput.value;
@@ -238,6 +232,12 @@ function restoreForm() {
   nameInput.value = form.name;
   emailInput.value = form.email;
   messageInput.value = form.message;
+}
+
+if (localStorage.getItem('form')) {
+  restoreForm();
+} else {
+  populateStorage();
 }
 
 nameInput.addEventListener('change', populateStorage);
