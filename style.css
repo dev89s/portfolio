@@ -66,6 +66,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 5% 8%;
+  font-size: 18px;
 }
 
 nav .logo {
@@ -97,18 +98,20 @@ nav .hamburger-menu {
 
 @media screen and (min-width: 768px) {
   nav {
-    padding: 5% 8%;
+    padding: 4% 8%;
+    /* Animations */
+    animation-name: move-left;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier();
+    max-width: calc(1200px + 16%);
+    margin-inline: auto;
   }
 
   nav .logo {
     color: #4053fc;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 20px;
-
-    /* Animations */
-    animation-name: rotate-logo;
-    animation-duration: 2s;
   }
 
   @keyframes rotate-logo {
@@ -118,6 +121,16 @@ nav .hamburger-menu {
 
     to {
       transform: rotate(0);
+    }
+  }
+
+  @keyframes move-left {
+    from {
+      transform: translatey(-70%);
+    }
+
+    to {
+      transform: translatey(0);
     }
   }
 
@@ -136,7 +149,7 @@ nav .hamburger-menu {
   }
 
   nav .desktop-menu a {
-    font-size: 15px;
+    font-size: 18px;
     color: #344563;
     padding: 0;
   }
@@ -153,12 +166,20 @@ nav .hamburger-menu {
 .headline {
   display: flex;
   flex-direction: column;
-  padding: 8%;
+  padding: 3% 8%;
   padding-bottom: 25%;
+  align-items: center;
   gap: 12px;
   background-image: url(src/backgrounds/background.svg);
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+.headline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 1200px;
 }
 
 .main-title {
@@ -201,8 +222,13 @@ nav .hamburger-menu {
 @media screen and (min-width: 768px) {
   .headline {
     background-image: url(src/backgrounds/headline-desktop.svg);
-    background-size: 110%;
+    background-size: 105%;
     background-position: 50% 30%;
+    background-clip: border-box;
+    max-width: 1500px;
+    padding-bottom: 20%;
+    margin-inline: auto;
+    max-height: 1200px;
   }
 
   .main-title {
@@ -232,6 +258,7 @@ nav .hamburger-menu {
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
+  max-width: 1200px;
   background-color: #fff;
   margin: 15% 0;
   padding: 5%;
@@ -332,14 +359,14 @@ nav .hamburger-menu {
 @media screen and (min-width: 768px) {
   .projects {
     padding: 3% 8%;
-    padding-top: 10%;
+    padding-top: 120px;
   }
 
   .card {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
-    margin: 10% auto;
+    margin: 70px auto;
     padding: 24px;
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
   }
@@ -654,6 +681,8 @@ nav .hamburger-menu {
     grid-template-columns: 1fr 1fr;
     padding: 10% 8%;
     column-gap: 8px;
+    max-width: calc(1200px + 16%);
+    margin-inline: auto;
   }
 
   .about-container {

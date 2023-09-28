@@ -127,7 +127,7 @@ function generatePopup(cardNum) {
       <div class="modal-title-container">
         <h2 class="card-title">${info.name}</h2>
         <button type="button"class="close-modal">&times;</button>
-      </div>  
+      </div>
       <ul class="card-details">
         <li class="prim-detail-cap">${info.company}</li>
         <li><img src="src/icons/counter.svg" alt="circle dots"></li>
@@ -135,7 +135,7 @@ function generatePopup(cardNum) {
         <li><img src="src/icons/counter.svg" alt="circle dots"></li>
         <li class="sec-detail-cap">${info.year}</li>
       </ul>
-    </div> 
+    </div>
     <img class="card-cover" src="${info.imageUrl}" alt="image of previous work example">
     <div class="card-info">
       <p class="description">
@@ -184,6 +184,13 @@ window.onclick = function (event) {
     cardModalContainer.style.display = 'none';
   }
 };
+
+// -------------- About me --------------- //
+
+const resumeBtn = document.querySelector(".resume-link");
+resumeBtn.addEventListener("click", () => {
+  window.open("https://docs.google.com/document/d/1xdRXVMySL9_0LnDQvNxzeGsRitsEDfNLiYiSCAnvp5k/edit?usp=sharing");
+})
 
 // ------ Contact Form validation -------- //
 const contactForm = document.querySelector('.contact-form');
