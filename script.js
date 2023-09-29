@@ -192,6 +192,16 @@ resumeBtn.addEventListener("click", () => {
   window.open("https://docs.google.com/document/d/1xdRXVMySL9_0LnDQvNxzeGsRitsEDfNLiYiSCAnvp5k/edit?usp=sharing");
 })
 
+const aboutTitle = document.querySelector(".about-title");
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth <= 768) {
+    aboutTitle.textContent = "About Myself";
+  } else {
+    aboutTitle.innerHTML = "About<br>Myself"
+  }
+})
+
 // ------ Contact Form validation -------- //
 const contactForm = document.querySelector('.contact-form');
 const contactError = document.querySelector('.contact-error');
