@@ -107,7 +107,7 @@ In order to reproduce the portfolio and be able to make changes for your own pur
 ### Deployment
 
 You can deploy this project by opening a new github repo and initialize the local git repo and connect it through: ```$ git remote add origin main [your github repo link]``` command.
-Then you can make a pull requrest and 
+Then you can make a pull requrest and
 Then if you go to the repository in your account, you'll see the pull requrest prompt appear at the top and the you can make a pull request and observe the Github Actions checking Linters.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -120,7 +120,7 @@ Then if you go to the repository in your account, you'll see the pull requrest p
 👤 **Sasan Moshir**
 
 - GitHub: [@dev89s](https://github.com/dev89s)
-- Twitter: [@dev89_s](https://twitter.com/dev89_s)
+- Twitter: [@dev89s](https://twitter.com/dev89s)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -129,7 +129,7 @@ Then if you go to the repository in your account, you'll see the pull requrest p
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Updated design with cleaner design**: the desgin will improve significantly. 
+- **Updated design with cleaner design**: the desgin will improve significantly.
 - **Desktop version**: desktop support will be added.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

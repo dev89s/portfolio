@@ -240,18 +240,20 @@ nav .hamburger-menu {
 .connect-icons {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 3px;
   color: #505f79;
   list-style: none;
 }
 
 .connect-icons a {
   display: flex;
+  padding: 5px;
   align-items: center;
+  border-radius: 5px;
 }
 
 .connect-icons a:hover {
-  background-color: #babdda;
+  background-color: #b2b6a177;
 }
 
 @media screen and (min-width: 768px) {
@@ -784,6 +786,10 @@ nav .hamburger-menu {
   text-align: center;
   font-size: 18px;
   margin-bottom: 10%;
+}
+
+.contact-me-email-address {
+  color: cyan;
 }
 
 .contacts-heading {
