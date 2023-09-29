@@ -481,6 +481,7 @@ nav .hamburger-menu {
   left: 0;
   top: 0;
   overflow: auto;
+  padding-block: 5%;
   width: 100%;
   height: 100%;
   background-color: rgba(193, 199, 208, 0.7);
@@ -489,12 +490,12 @@ nav .hamburger-menu {
 
 .card-modal {
   background-color: #fff;
-  margin: auto 5%;
   border-radius: 16px;
 }
 
 .card-modal .card {
   transition: none;
+  margin: 0;
 }
 
 .card-modal .card:hover {
@@ -583,6 +584,7 @@ nav .hamburger-menu {
     margin: 3% 0;
     aspect-ratio: 1108/586;
     object-fit: cover;
+    object-position: top;
   }
 
   .popup-card .description {

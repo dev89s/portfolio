@@ -34,40 +34,48 @@ contact.onclick = function () {
 
 const cardInfo = [
   {
-    name: 'Tonic',
-    company: 'CANOPY',
-    role: 'Back End Dev',
-    year: '2015',
-    desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
-    techstack: ['html', 'css', 'javasctipt'],
+    name: 'SummerWave<br>Hotels',
+    company: 'SMCO',
+    role: 'Full-Stack Dev',
+    year: '2023',
+    desctiption: "SummerWave Hotels is a website to reserve rooms for the SummerWave Hotel chains. You can select available rooms from a gaphic list in the home page of the website, or you can just click on the reserve menu item and see the full list of available rooms and the city in which they are available.",
+    techstack: ['React', 'Redux', 'Ruby on Rails'],
     imageUrl: 'src/images/card-cover1.png',
+    githubLink: 'https://github.com/dev89s/final-capstone-front-end',
+    liveDemoLink: 'https://summerwave-hotels.onrender.com/',
   },
   {
-    name: 'Multi-Post Stories',
-    company: 'CANOPY',
-    role: 'Back End Dev',
-    year: '2015',
+    name: 'Weather Quality',
+    company: 'SMCO',
+    role: 'Full-Stack Dev',
+    year: '2023',
     desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent. ",
-    techstack: ['html', 'css', 'javasctipt'],
+    techstack: ['React', 'Redux', 'Third Party API'],
     imageUrl: 'src/images/card-cover2.png',
+    githubLink: 'https://github.com/dev89s/air-quality-mobile',
+    liveDemoLink: 'https://weather-and-air-quality.onrender.com/home',
   },
   {
-    name: 'Tonic',
-    company: 'CANOPY',
-    role: 'Back End Dev',
-    year: '2015',
-    desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
-    techstack: ['html', 'css', 'javasctipt'],
+    name: 'Bookstore CMS',
+    company: 'SMCO',
+    role: 'Front-End Dev',
+    year: '2023',
+    desctiption: "Simple Bookstore CMS project that displays a list of books that have a name, an author, and a category. It uses React Router and an Online API to save book entries. (the progress section is cosmetic for now)",
+    techstack: ['React', 'Online API', 'JavaScript', 'WebPack'],
     imageUrl: 'src/images/card-cover3.png',
+    githubLink: 'https://github.com/dev89s/bookstore',
+    liveDemoLink: 'https://bookstore-cms-7ctr.onrender.com',
   },
   {
-    name: 'Multi-Post Stories',
-    company: 'CANOPY',
-    role: 'Back End Dev',
-    year: '2015',
-    desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent.",
+    name: 'WebDev Academy',
+    company: 'SMCO',
+    role: 'Front-End Dev',
+    year: '2023',
+    desctiption: "WebDev Academy is an example of mobile first Online Educational Intitution website. It's purpose is to represent the institution, its different courses and the famous teachers from all around the world while giving the user a welcome feeling and a way to join the program.",
     techstack: ['html', 'css', 'javasctipt'],
     imageUrl: 'src/images/card-cover4.png',
+    githubLink: 'https://github.com/dev89s/webdev-inst',
+    liveDemoLink: 'https://dev89s.github.io/webdev-inst/',
   },
 ];
 
@@ -97,15 +105,18 @@ function loadCards(cardInfo) {
       <p class="description">
         ${cardInfo[i].desctiption}
       </p>
-      <ul class="techstack">
-        <li>${cardInfo[i].techstack[0]}</li>
-        <li>${cardInfo[i].techstack[1]}</li>
-        <li>${cardInfo[i].techstack[2]}</li>
+      <ul class="techstack card-techstack-${i + 1}">
       </ul>
       <button class="card-button" type="button" id="card-button-${i + 1}">See Project</button>
     </div>
   `;
     projects.appendChild(card);
+    const techstack = document.querySelector(`.card-techstack-${i + 1}`);
+    cardInfo[i].techstack.forEach(info => {
+      const li = document.createElement("li");
+      li.textContent = info;
+      techstack.appendChild(li);
+    });
   }
 }
 loadCards(cardInfo);
@@ -119,7 +130,7 @@ const thirdCardBtn = document.querySelector('#card-button-3');
 const forthCardBtn = document.querySelector('#card-button-4');
 
 function generatePopup(cardNum) {
-  cardModalContainer.style.display = 'block';
+  cardModalContainer.style.display = 'flex';
   const info = cardInfo[cardNum];
   cardModal.innerHTML = `
   <div class="card card${cardNum + 1} popup-card">
@@ -142,10 +153,7 @@ function generatePopup(cardNum) {
        ${info.desctiption}
       </p>
       <div class="card-info-sub">
-        <ul class="techstack">
-          <li>${info.techstack[0]}</li>
-          <li>${info.techstack[1]}</li>
-          <li>${info.techstack[2]}</li>
+        <ul class="techstack popup-card-techstack-${cardNum + 1}">
         </ul>
         <div class="popup-buttons">
           <button class="card-button" type="button" id="modalBtn1">See Live
@@ -159,11 +167,28 @@ function generatePopup(cardNum) {
     </div>
   </div>
   `;
+
+  const popupCardTechStack = document.querySelector(`.popup-card-techstack-${cardNum + 1}`);
+  info.techstack.forEach(technology => {
+    const li = document.createElement("li");
+    li.textContent = technology;
+    popupCardTechStack.appendChild(li);
+  });
+
   const closeModal = document.querySelector('.close-modal');
   function closeModalFunc() {
     cardModalContainer.style.display = 'none';
   }
   closeModal.addEventListener('click', closeModalFunc);
+
+  const liveDemoLink = document.querySelector("#modalBtn1");
+  liveDemoLink.addEventListener("click", () => {
+    window.open(`${info.liveDemoLink}`);
+  })
+  const githubLinkBtn = document.querySelector("#modalBtn2");
+  githubLinkBtn.addEventListener("click", () => {
+    window.open(`${info.githubLink}`);
+  })
 }
 
 firstCardBtn.addEventListener('click', () => {
