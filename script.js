@@ -1,6 +1,6 @@
 // ----- Hamburger button pop up menu ------- //
 
-const hamburgerButton = document.querySelector('#hamburger-menu');
+const hamburgerButton = document.querySelector('.hamburger-menu');
 
 const overlayMenu = document.querySelector('.overlay-menu');
 
@@ -12,6 +12,7 @@ const contact = document.querySelector('#contact-link');
 
 hamburgerButton.onclick = function () {
   overlayMenu.style.display = 'block';
+  console.log("clicked");
 };
 
 close.onclick = function () {
