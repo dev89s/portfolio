@@ -885,6 +885,10 @@ nav .hamburger-menu-hidden {
     font-size: 40px;
   }
 
+  .about-description {
+    font-size: 18px;
+  }
+
   .categories {
     margin: 0;
   }
