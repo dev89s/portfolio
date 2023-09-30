@@ -50,7 +50,7 @@ const cardInfo = [
     company: 'SMCO',
     role: 'Full-Stack Dev',
     year: '2023',
-    desctiption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent. ",
+    desctiption: "A Web based App that gets the weather from OpenWeather API and displays as a list of famous cities (implemented using React/&Redux). And also uses Air Quality/Polution API to show details of air qualtiy for each city.",
     techstack: ['React', 'Redux', 'Third Party API'],
     imageUrl: 'src/images/card-cover2.png',
     githubLink: 'https://github.com/dev89s/air-quality-mobile',
@@ -210,6 +210,73 @@ window.onclick = function (event) {
     cardModalContainer.style.display = 'none';
   }
 };
+
+// -------------- Skills --------------- //
+
+// expand languages
+const langHeader = document.querySelector(".lang-list-header");
+const langList = document.querySelector(".lang-list");
+const langHeaderMarginBottom = getComputedStyle(langHeader).marginBottom;
+const langArrow = document.querySelector(".lang-arrow");
+
+langHeader.addEventListener("click", () => {
+  let height = getComputedStyle(langList).height;
+  let imgs = document.querySelectorAll('.lang-list img');
+  if (height == "0px") {
+    langArrow.style.transform = "rotate(0deg)"
+    langList.style.height = langList.scrollHeight.toString() + "px";
+    langHeader.style.marginBottom = "8%";
+  } else {
+    langArrow.style.transform = "rotate(-90deg)"
+    langList.style.height = getComputedStyle(langList).height;
+    setTimeout(() => {
+      langHeader.style.marginBottom = 0;
+      langList.style.height = 0;
+    }, 10);
+  }
+});
+
+// expand Frameworks
+const frameworkHeader = document.querySelector(".framework-list-header");
+const frameworkList = document.querySelector(".framework-list");
+const frameworkArrow = document.querySelector(".framework-arrow");
+
+frameworkHeader.addEventListener("click", () => {
+  let height = getComputedStyle(frameworkList).height;
+  if (height == "0px") {
+    frameworkArrow.style.transform = "rotate(90deg)"
+    frameworkList.style.height = frameworkList.scrollHeight.toString() + "px";
+    frameworkHeader.style.marginBottom = "8%";
+  } else {
+    frameworkArrow.style.transform = "rotate(0deg)"
+    frameworkList.style.height = getComputedStyle(langList).height;
+    setTimeout(() => {
+      frameworkHeader.style.marginBottom = 0;
+      frameworkList.style.height = 0;
+    }, 10);
+  }
+});
+
+// expand skills
+const skillsHeader = document.querySelector(".skills-list-header");
+const skillsList = document.querySelector(".skills-list");
+const skillsArrow = document.querySelector(".skills-arrow");
+
+skillsHeader.addEventListener("click", () => {
+  let height = getComputedStyle(skillsList).height;
+  if (height == "0px") {
+    skillsArrow.style.transform = "rotate(90deg)"
+    skillsList.style.height = skillsList.scrollHeight.toString() + "px";
+    skillsHeader.style.marginBottom = "8%";
+  } else {
+    skillsArrow.style.transform = "rotate(0deg)"
+    skillsList.style.height = getComputedStyle(langList).height;
+    setTimeout(() => {
+      skillsHeader.style.marginBottom = 0;
+      skillsList.style.height = 0;
+    }, 10);
+  }
+});
 
 // -------------- About me --------------- //
 
